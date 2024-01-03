@@ -28,7 +28,7 @@ const LoginForm = ({ handleSignUpClick, setUser, setModalVisible }) => {
 
     try {
       const response = await axios.post(
-        "https://studyquest-be-production.up.railway.app//login",
+        "https://studyquest-be-production.up.railway.app/login",
         {
           username: username,
           password: password,
