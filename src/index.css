@@ -1,13 +1,739 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+/* Home */
+
+.home-container-first {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  background-color: rgb(248, 248, 248);
+
+  overflow-y: hidden;
+}
+
+.home-container-second {
+  display: flex;
+  flex-direction: column;
+  padding: 35px;
+  min-width: 600px;
+  border-bottom: 2px solid black;
+  align-items: center;
+}
+
+/* navbar */
+.navbar {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+
+  min-width: 100%;
+}
+
+/* Settings - User Container */
+
+.settings-user-container {
+  display: flex;
+
+  gap: 5px;
+}
+/* Settings Button */
+.settings-user-btn {
+  font-weight: bold;
+  color: rgb(44, 62, 80);
+  border: none;
+  background-color: rgb(248, 248, 248);
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  gap: 5px;
+  padding: 5px;
+  height: 40px;
+  font-size: 18px;
+}
+.settings-user-btn > span {
+  padding: 0;
+}
+.settings-user-btn:hover {
+  background-color: rgb(219, 219, 219);
+}
+
+/*Switch mode buttons*/
+
+.switch-modes-btn-container {
+  box-sizing: border-box;
+  border-bottom: 2px solid black;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+}
+.switch-modes-btn {
+  color: rgb(44, 62, 80);
+  border: none;
+  font-size: 18px;
+  background-color: rgb(248, 248, 248);
+}
+.switch-modes-btn:hover {
+  background-color: rgb(219, 219, 219);
+}
+
+/*Timers */
+
+.timer-container {
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+}
+.time-left-display {
+  text-align: center;
+  font-size: 150px;
+  font-weight: bold;
+  color: rgb(44, 62, 80);
+  box-shadow: 5px 5px 10px rgb(87, 82, 82);
+  padding: 50px;
+
+  margin-bottom: 30px;
+}
+
+/* Modal */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* semi-transparent overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  margin-bottom: 5%;
+  background-color: rgb(248, 248, 248);
+  padding: 40px;
+  padding-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  min-height: 200px;
+  min-width: 300px;
+}
+.modal-header-section {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 10px;
+}
+.modal-heading {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin: 0;
+  color: rgb(44, 62, 80);
+}
+.modal-close-btn {
+  align-self: center;
+  border: none;
+  background-color: rgb(248, 248, 248);
+  color: rgb(44, 62, 80);
+}
+.modal-close-btn:hover {
+  background-color: rgb(219, 219, 219);
+}
+
+/* TimerConfig.css */
+
+.timer-config-input-container-first {
+  display: flex;
+  gap: 10px;
+}
+.timer-config-input-container-second {
+  display: flex;
+  flex-direction: column;
+  max-width: 120px;
+}
+.timer-config-section-heading {
+  color: rgb(44, 62, 80);
+  text-align: center;
+}
+.timer-input-label {
+  display: flex;
+  padding: 5px;
+  font-size: 18px;
+  color: rgb(44, 62, 80);
+}
+.timer-config-input {
+  font-size: 16px;
+  margin: 0;
+  border: none;
+  background-color: rgb(235, 235, 235);
+  padding: 10px;
+  color: rgb(44, 62, 80);
+}
+button:hover {
+  cursor: pointer;
+}
+
+/*START STOP BTN */
+
+.pause-skip-btn-container {
+  display: flex;
+  gap: 5px;
+  color: rgb(44, 62, 80);
+}
+.start-stop-btn {
+  padding: 10px 25px 10px 25px;
+  font-weight: bold;
+  font-size: 22px;
+  background-color: rgb(248, 248, 248);
+  display: flex;
+  align-items: center;
+}
+.start-stop-btn:hover {
+  color: rgb(44, 62, 80);
+  background-color: rgb(219, 219, 219);
+  border: 2px solid rgb(219, 219, 219);
+}
+.skip-btn {
+  font-size: 22px;
+  font-weight: bold;
+  background-color: rgb(248, 248, 248);
+  display: flex;
+  align-items: center;
+}
+.skip-btn:hover {
+  color: rgb(44, 62, 80);
+  background-color: rgb(219, 219, 219);
+  border: 2px solid rgb(219, 219, 219);
+}
+
+.session-counter {
+  color: rgb(44, 62, 80);
+  background-color: rgb(248, 248, 248);
+  padding: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.startStopStudying {
+  color: rgb(217, 83, 79);
+  border: 2px solid rgb(217, 83, 79);
+}
+
+.startStopShortBreak {
+  color: rgb(79, 172, 83);
+  border: 2px solid rgb(79, 172, 83);
+}
+
+.startStopLongBreak {
+  color: rgb(68, 68, 152);
+  border: 2px solid rgb(68, 68, 152);
+}
+/*Study tracker */
+
+.study-tracker-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.study-sessions {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+}
+.study-session {
+  color: rgb(44, 62, 80);
+}
+.total-study-time {
+  text-align: center;
+  font-weight: bold;
+  color: rgb(44, 62, 80);
+}
+
+.study-tracker-btn {
+  margin-top: 20px;
+  padding: 5px 15px 5px 15px;
+  font-weight: bold;
+  font-size: 16px;
+  background-color: rgb(248, 248, 248);
+  border: none;
+  color: rgb(44, 62, 80);
+}
+.study-tracker-btn:hover {
+  background-color: rgb(219, 219, 219);
+}
+
+/*Login form */
+
+/* Add this CSS to your stylesheets or use it in your React component */
+
+.login-page-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-header {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: rgb(44, 62, 80);
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+}
+
+.input-container {
+  margin-bottom: 15px;
+}
+
+.form-label {
+  font-weight: bold;
+  color: rgb(44, 62, 80);
+}
+
+.form-input {
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 18px;
+}
+
+.form-input.error {
+  border-color: rgb(217, 83, 79);
+}
+
+.login-page-btns {
+  display: flex;
+  gap: 10px;
+
+  width: 100%;
+  justify-content: center;
+}
+
+.submit-btn,
+.test-user-btn {
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.submit-btn:hover,
+.test-user-btn:hover {
+  background-color: #0056b3;
+}
+
+.errors-list-ul {
+  color: rgb(217, 83, 79);
+  margin: 0;
+
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.error-msg-p {
+  color: rgb(217, 83, 79);
+
+  margin-top: 10px;
+  padding: 0;
+}
+
+.alternator-btn {
+  text-align: center;
+  margin-top: 20px;
+  border: none;
+  color: rgb(44, 62, 80);
+  background-color: rgb(248, 248, 248);
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.alternator-btn > span {
+  color: #007bff;
+}
+
+.alternator-btn:hover {
+  text-decoration: underline;
+}
+/*SignUP FORM */
+/* Add this CSS to your stylesheets or use it in your React component */
+/* Add this CSS to your stylesheets or use it in your React component */
+
+.signup-page-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.signup-header {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: rgb(44, 62, 80);
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-container {
+  margin-bottom: 15px;
+}
+
+.invalid-input {
+  border-color: rgb(217, 83, 79);
+}
+
+.valid-input {
+  color: rgb(79, 172, 83);
+}
+
+.submit-btn {
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Studying, ShortBreak & LongBreak filters*/
+
+.studying {
+  color: rgb(217, 83, 79);
+}
+.shortBreak {
+  color: rgb(79, 172, 83);
+}
+.longBreak {
+  color: rgb(68, 68, 152);
+}
+
+/* HISTORY CSS STYLING */
+
+/* User.css */
+.user-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.total-time-studied {
+  color: rgb(44, 62, 80);
+  font-weight: bold;
+  text-align: center;
+}
+
+.logout-button,
+.view-history-btn {
+  margin-top: 16px;
+  padding: 8px;
+  background-color: rgb(248, 248, 248);
+  color: rgb(44, 62, 80);
+  border: none;
+  border-bottom: 2px solid rgb(44, 62, 80);
+
+  font-size: 20px;
+  min-width: 65%;
+}
+
+.logout-button:hover,
+.view-history-btn:hover {
+  background-color: rgb(219, 219, 219);
+}
+
+.history-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border-bottom: 1px solid black;
+  padding-bottom: 2px;
+  align-items: center;
+}
+.history-go-back-btn {
+  border: none;
+  width: 40px;
+  font-weight: bold;
+  color: rgb(44, 62, 80);
+  background-color: rgb(248, 248, 248);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  gap: 5px;
+  padding: 5px;
+  height: 40px;
+  font-size: 18px;
+}
+.history-go-back-btn > span {
+  padding: 0;
+}
+.history-go-back-btn:hover {
+  background-color: rgb(219, 219, 219);
+}
+.history-heading {
+  font-size: 20px;
+
+  text-align: center;
+}
+.calender-grid-container {
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 400px;
+}
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  padding-right: 10px;
+}
+.new-month {
+  width: 40px;
+  height: 25px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.calendar-cell {
+  display: flex;
+  font-size: 14px;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.calendar-cell.studied {
+  background-color: #4caf50;
+  color: white;
+}
+
+.selected-date-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.selected-date {
+  background-color: white;
+
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  text-align: left;
+}
+
+.selected-date-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.selected-date-heading {
+  font-size: 18px;
+  color: rgb(44, 62, 80);
+}
+.selected-date-close-button {
+  font-size: 25px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-weight: bold;
+  color: rgb(44, 62, 80);
+  height: 100%;
+}
+
+.selected-date-close-button:hover {
+  background-color: rgb(219, 219, 219);
+}
+
+.selected-date-total {
+  color: rgb(44, 62, 80);
+  text-align: center;
+  margin: 0;
+  padding: 10px;
+  border-bottom: 2px solid rgb(44, 62, 80);
+}
+
+.selected-date-info-container {
+  display: flex;
+  border-bottom: 1px solid rgb(44, 62, 80);
+
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.selected-date-session-counter {
+  color: rgb(44, 62, 80);
+  font-weight: 400;
+}
+.selected-date-info {
+  color: rgb(44, 62, 80);
+}
+.selected-date-info > p {
+  font-size: 15px;
+}
+.session-info {
+  margin-top: 10px;
+}
+
+/* GOOGLE SIGNIN */
+
+#signInDiv {
+  border: none;
+  background-color: rgb(248, 248, 248);
+}
+/* MEDIA QUERIES */
+
+@media (max-width: 700px) {
+  /*HOME */
+  .home-container-second {
+    min-width: 0px;
+    max-width: 100vw;
+    box-sizing: border-box;
+    overflow: hidden;
+    border: none;
+    padding: 10px;
+  }
+
+  /*NAVBAR */
+  .navbar {
+    min-width: 20%;
+    gap: 5px;
+  }
+  .navbar-heading {
+    font-size: 22px;
+  }
+
+  .settings-user-container {
+    display: flex;
+    gap: 0px;
+  }
+  .settings-user-btn {
+    font-size: 16px;
+  }
+
+  /*SWITCH MODE BTNS */
+
+  .switch-modes-btn-container {
+    border-bottom: 1px solid black;
+    width: fit-content;
+
+    gap: 15px;
+    padding: 12px;
+    margin-top: 20px;
+  }
+  .switch-modes-btn {
+    font-size: 16px;
+  }
+
+  /*TIMER */
+
+  .timer-container {
+    justify-content: flex-start;
+  }
+  .time-left-display {
+    font-size: 110px;
+    box-shadow: 2px 2px 7px rgb(87, 82, 82);
+    padding: 55px 25px 55px 25px;
+
+    margin-bottom: 50px;
+    margin-top: 70px;
+  }
+
+  /*Modal*/
+  .modal-content {
+    padding: 20px;
+    width: 80%;
+  }
+  .modal-header-section {
+    padding: 10px 20px 10px 20px;
+  }
+
+  /*TimerConfig */
+
+  .timer-config-input-container-first {
+    display: flex;
+    gap: 5px;
+
+    justify-content: space-between;
+  }
+  .timer-config-input-container-second {
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+  }
+  .timer-input-label {
+    display: flex;
+    padding: 5px;
+    font-size: 15px;
+    color: rgb(44, 62, 80);
+  }
+  .timer-config-input {
+    font-size: 15px;
+    margin: 0;
+    background-color: rgb(235, 235, 235);
+    padding: 1px;
+    color: rgb(44, 62, 80);
+  }
 }
