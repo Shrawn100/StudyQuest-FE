@@ -27,7 +27,8 @@ function GoogleAuth({ setUser, setModalVisible }) {
   useEffect(() => {
     /*global google */
     google.accounts.id.initialize({
-      client_id: process.env.REACT_APP_GOOGLE_ID,
+      client_id:
+        "706196984767-52k37tr38j7vb6a8caaf838oq8aqk60e.apps.googleusercontent.com",
       callback: handleCallBackResponse,
     });
 
