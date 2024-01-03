@@ -17,7 +17,7 @@ const User = ({ setUser, user }) => {
         };
         try {
           const response = await axios.get(
-            "http://localhost:3000/history",
+            "https://studyquest-be-production.up.railway.app/history",
             config
           );
           if (response.data && response.data.history) {

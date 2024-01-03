@@ -96,7 +96,11 @@ const CountdownTimer = ({
         headers: { Authorization: `Bearer ${token}` },
       };
 
-      await axios.post("http://localhost:3000/session", data, config);
+      await axios.post(
+        "https://studyquest-be-production.up.railway.app/session",
+        data,
+        config
+      );
     } catch (error) {
       if (error.response) {
         // The request was made and the server responded with a status code

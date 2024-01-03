@@ -21,7 +21,7 @@ const Authentication = ({ user, setUser }) => {
         };
         try {
           const response = await axios.get(
-            "http://localhost:3000/checkUser",
+            "https://studyquest-be-production.up.railway.app/checkUser",
             config
           );
 

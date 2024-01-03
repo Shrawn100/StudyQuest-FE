@@ -7,10 +7,13 @@ function GoogleAuth({ setUser, setModalVisible }) {
     let userObject = jwtDecode(response.credential);
 
     try {
-      const response = await axios.post("http://localhost:3000/googleSignIn", {
-        name: userObject.given_name,
-        email: userObject.email,
-      });
+      const response = await axios.post(
+        "https://studyquest-be-production.up.railway.app/googleSignIn",
+        {
+          name: userObject.given_name,
+          email: userObject.email,
+        }
+      );
       const { token, user } = response.data;
       localStorage.setItem("token", token);
       setUser(user);

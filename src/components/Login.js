@@ -27,10 +27,13 @@ const LoginForm = ({ handleSignUpClick, setUser, setModalVisible }) => {
     event.preventDefault();
 
     try {
-      const response = await axios.post("http://localhost:3000/login", {
-        username: username,
-        password: password,
-      });
+      const response = await axios.post(
+        "https://studyquest-be-production.up.railway.app//login",
+        {
+          username: username,
+          password: password,
+        }
+      );
       const { message, errors, token, user } = response.data;
 
       if (errors) {
