@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/StudyQuest-FE/static/css/main.933315e6.css",
-    "main.js": "/StudyQuest-FE/static/js/main.aac63c13.js",
+    "main.js": "/StudyQuest-FE/static/js/main.e1bde9c2.js",
     "static/js/787.98204dde.chunk.js": "/StudyQuest-FE/static/js/787.98204dde.chunk.js",
     "static/media/alarm.mp3": "/StudyQuest-FE/static/media/alarm.3b3e0bd397bb311858aa.mp3",
     "index.html": "/StudyQuest-FE/index.html",
     "main.933315e6.css.map": "/StudyQuest-FE/static/css/main.933315e6.css.map",
-    "main.aac63c13.js.map": "/StudyQuest-FE/static/js/main.aac63c13.js.map",
+    "main.e1bde9c2.js.map": "/StudyQuest-FE/static/js/main.e1bde9c2.js.map",
     "787.98204dde.chunk.js.map": "/StudyQuest-FE/static/js/787.98204dde.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.933315e6.css",
-    "static/js/main.aac63c13.js"
+    "static/js/main.e1bde9c2.js"
   ]
 }
