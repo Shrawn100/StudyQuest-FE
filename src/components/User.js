@@ -51,7 +51,7 @@ const User = ({ setUser, user }) => {
       {historyVisible ? null : (
         <>
           <button className="logout-button" onClick={handleLogOut}>
-            Log out
+            Log out <span class="material-symbols-outlined">logout</span>
           </button>
         </>
       )}

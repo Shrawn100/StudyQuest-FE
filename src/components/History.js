@@ -68,7 +68,9 @@ const History = ({
           <button className="history-go-back-btn" onClick={handleBackClick}>
             <span className="material-symbols-outlined">arrow_back</span>
           </button>
-          <h2 className="history-heading">History</h2>
+          <h2 className="history-heading">
+            History <span class="material-symbols-outlined">history</span>
+          </h2>
         </nav>
 
         <div ref={scrollContainerRef} className="calender-grid-container">
@@ -161,19 +163,26 @@ const History = ({
                 <p className="selected-date-total">
                   Total time: {formatTime(groupedSessions[selectedDate]?.total)}
                 </p>
-                {groupedSessions[selectedDate]?.sessions.map(
-                  (session, index) => (
-                    <div key={index} className="selected-date-info-container">
-                      <h4 className="selected-date-session-counter">
-                        Session {index + 1}
-                      </h4>
-                      <div className="selected-date-info">
-                        <p>Start Time: {formatTime(new Date(session.date))}</p>
-                        <p>Duration: {formatTime(session.duration)}</p>
+                <section className="selected-date-info-container-second">
+                  {groupedSessions[selectedDate]?.sessions.map(
+                    (session, index) => (
+                      <div
+                        key={index}
+                        className="selected-date-info-container-first"
+                      >
+                        <h4 className="selected-date-session-counter">
+                          Session {index + 1}
+                        </h4>
+                        <div className="selected-date-info">
+                          <p>
+                            Start Time: {formatTime(new Date(session.date))}
+                          </p>
+                          <p>Duration: {formatTime(session.duration)}</p>
+                        </div>
                       </div>
-                    </div>
-                  )
-                )}
+                    )
+                  )}
+                </section>
               </div>
             </div>
           )}
@@ -187,7 +196,7 @@ const History = ({
         Total time studied: {formattedTotalTime}
       </p>
       <button className="view-history-btn" onClick={handleBackClick}>
-        View History
+        View History <span class="material-symbols-outlined">history</span>
       </button>
     </>
   );

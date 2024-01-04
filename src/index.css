@@ -482,8 +482,11 @@ button:hover {
   background-color: rgb(248, 248, 248);
   color: rgb(44, 62, 80);
   border: none;
-  border-bottom: 2px solid rgb(44, 62, 80);
-
+  border-bottom: 1px solid rgb(44, 62, 80);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
   font-size: 20px;
   min-width: 65%;
 }
@@ -523,9 +526,14 @@ button:hover {
 }
 .history-heading {
   font-size: 20px;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
   text-align: center;
+  color: rgb(44, 62, 80);
 }
+
 .calender-grid-container {
   overflow-y: auto;
   overflow-x: hidden;
@@ -577,7 +585,6 @@ button:hover {
 
 .selected-date {
   background-color: white;
-
   padding: 30px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -614,11 +621,15 @@ button:hover {
   padding: 10px;
   border-bottom: 2px solid rgb(44, 62, 80);
 }
-
-.selected-date-info-container {
+.selected-date-info-container-second {
+  overflow-y: auto;
+  max-height: 300px;
+  padding: 10px;
+}
+.selected-date-info-container-first {
   display: flex;
   border-bottom: 1px solid rgb(44, 62, 80);
-
+  padding-right: 20px;
   justify-content: space-between;
   align-items: center;
   gap: 20px;
