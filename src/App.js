@@ -1,15 +1,14 @@
-import CountdownTimer from "./Timer";
+import CountdownTimer from "./components/Timer";
 import React, { useState, useEffect } from "react";
-import TimerConfig from "./TimerConfig";
 
-import StudyTracker from "./StudyTracker";
-import Settings from "./SettingsModal";
-import User from "./Authentication";
-import Authentication from "./Authentication";
+import StudyTracker from "./components/StudyTracker";
+import Settings from "./components/SettingsModal";
+
+import Authentication from "./components/Authentication";
 
 import classNames from "classnames";
 
-function Home() {
+const App = () => {
   //Study periods
   //Stating the initial default study time
   const [startStudyTime, setStartStudyTime] = useState(25);
@@ -250,6 +249,6 @@ function Home() {
       </div>
     </div>
   );
-}
+};
 
-export default Home;
+export default App;

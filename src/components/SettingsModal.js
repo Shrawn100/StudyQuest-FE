@@ -1,5 +1,6 @@
 import { useState } from "react";
 import TimerConfig from "./TimerConfig";
+import AlarmConfig from "./AlarmConfig";
 
 const Settings = ({
   startStudyTime,
@@ -42,6 +43,7 @@ const Settings = ({
               startLongBreakTime={startLongBreakTime}
               handleTimeChange={handleTimeChange}
             />
+            <AlarmConfig />
           </div>
         </div>
       )}

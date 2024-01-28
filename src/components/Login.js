@@ -17,11 +17,6 @@ const LoginForm = ({ handleSignUpClick, setUser, setModalVisible }) => {
       setPassword(value);
     }
   };
-  const handleLogin = async () => {
-    // Handle login with test user
-    setUsername("testUser");
-    setPassword("testUser");
-  };
 
   const handleSubmit = async (event) => {
     event.preventDefault();

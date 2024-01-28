@@ -13,6 +13,7 @@ const Authentication = ({ user, setUser }) => {
   useEffect(() => {
     async function checkUser() {
       const token = localStorage.getItem("token");
+
       if (token) {
         const config = {
           headers: {
